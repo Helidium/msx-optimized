@@ -1,6 +1,6 @@
-# MSX [![Build Status](https://secure.travis-ci.org/insin/msx.png?branch=master)](http://travis-ci.org/insin/msx)
+# MSX Optimized
 
-*The current version of MSX is based on version 0.12.2 of React's JSX Transformer.*
+*The current version of MSX Optimized is based on version 0.12.2 of React's JSX Transformer.*
 
 MSX tweaks [React](http://facebook.github.io/react/)'s JSX Transformer to output
 contents compatible with [Mithril](http://lhorie.github.io/mithril/)'s
@@ -58,7 +58,7 @@ For development and quick prototyping, an in-browser MSX transform is available.
 
 Download or use it directly from cdn.rawgit.com:
 
-* https://cdn.rawgit.com/insin/msx/master/dist/MSXTransformer.js
+* https://cdn.rawgit.com/helidium/msx-optimized/master/dist/MSXTransformer.js
 
 Simply include a `<script type="text/msx">` tag to engage the MSX transformer. 
 
@@ -71,7 +71,7 @@ Here's a handy template you can use:
 ```html
 <meta charset="UTF-8">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/0.1.30/mithril.js"></script>
-<script src="https://cdn.rawgit.com/insin/msx/master/dist/MSXTransformer.js"></script>
+<script src="https://cdn.rawgit.com/helidium/msx-optimized/master/dist/MSXTransformer.js"></script>
 <script type="text/msx;harmony=true">void function() { 'use strict';
 
 var Hello = {
@@ -92,30 +92,30 @@ m.module(document.body, Hello)
 ### Command Line Usage
 
 ```
-npm install -g msx
+npm install -g msx-optimized
 ```
 
 ```
-msx --watch src/ build/
+msx-optimized --watch src/ build/
 ```
 
 To disable precompilation from the command line, pass a `--no-precompile` flag.
 
-Run `msx --help` for more information.
+Run `msx-optimized --help` for more information.
 
 ### Module Usage
 
 ```
-npm install msx
+npm install msx-optimized
 ```
 
 ```javascript
-var msx = require('msx')
+var msx = require('msx-optimized')
 ```
 
 #### Module API
 
-##### `msx.transform(source: String[, options: Object])`
+##### `msx-optimized.transform(source: String[, options: Object])`
 
 Transforms XML-like syntax in the given source into object literals compatible
 with Mithril's `m.render()` function, or to function calls using Mithril's
@@ -125,27 +125,28 @@ To enable [ES6 transforms supported by JSX Transformer](http://kangax.github.io/
 pass a `harmony` option:
 
 ```javascript
-msx.transform(source, {harmony: true})
+msx-optimized.transform(source, {harmony: true})
 ```
 
-To disable default precompilation and always output `m()` calls, pass a
+To disable default precompilation and always output `{}` calls, pass a
 `precompile` option:
 
 ```javascript
-msx.transform(source, {precompile: false})
+msx-optimized.transform(source, {precompile: false})
 ```
 
 ### Examples
 
 Example inputs (using some ES6 features) and outputs are in
-[test/jsx](https://github.com/insin/msx/tree/master/test/jsx) and
-[test/js](https://github.com/insin/msx/tree/master/test/js), respectively.
+[test/jsx](https://github.com/helidium/msx-optimized/tree/master/test/jsx) and
+[test/js](https://github.com/helidium/msx-optimized/tree/master/test/js), respectively.
 
-An example [gulpfile.js](https://github.com/insin/msx/blob/master/gulpfile.js)
-is provided, which implements an `msxTransform()` step using `msx.transform()`.
+An example [gulpfile.js](https://github.com/helidium/msx-optimized/blob/master/gulpfile.js)
+is provided, which implements an `msxTransform()` step using `msx-optimized.transform()`.
 
 ## Related Modules
 
+* [msx](https://github.com/insin/msx) - forked plugin.
 * [gulp-msx](https://github.com/insin/gulp-msx) - gulp plugin.
 * [grunt-msx](https://github.com/hung-phan/grunt-msx) - grunt plugin.
 * [mithrilify](https://github.com/sectore/mithrilify) - browserify transform.
