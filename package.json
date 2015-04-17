@@ -1,7 +1,7 @@
 {
-  "name": "msx",
+  "name": "msx-optimized",
   "version": "0.3.0",
-  "description": "JSX for Mithril",
+  "description": "JSX for Mithril optimized",
   "main": "main.js",
   "dependencies": {
     "commoner": "^0.10.0",
@@ -16,23 +16,36 @@
   },
   "keywords": [
     "jsx",
-    "mithril"
+    "mithril",
+    "mithril optimized"
   ],
-  "author": "Jonathan Buchanan <jonathan.buchanan@gmail.com> (https://github.com/insin)",
+  "author": "Marko Biskup <marko.biskup@helidium.net> (https://github.com/helidium)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/insin/msx.git"
+    "url": "git://github.com/helidium/msx-optimized.git"
   },
   "licenses": [
     {
       "type": "Apache-2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "type": "MIT",
+      "url": "https://github.com/helidium/msx-optimized/LICENSE"
     }
   ],
   "scripts": {
     "test": "node test/tests.js"
   },
   "bin": {
-    "msx": "./bin/msx"
-  }
+    "msx-optimized": "./bin/msx-optimized"
+  },
+  "bugs": {
+    "url": "https://github.com/helidium/msx-optimized/issues"
+  },
+  "homepage": "https://github.com/helidium/msx-optimized",
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
 }
