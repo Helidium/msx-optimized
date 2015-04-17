@@ -110,7 +110,7 @@ npm install msx-optimized
 ```
 
 ```javascript
-var msx = require('msx-optimized')
+var msx-optimized = require('msx-optimized')
 ```
 
 #### Module API
