@@ -128,7 +128,7 @@ pass a `harmony` option:
 msx-optimized.transform(source, {harmony: true})
 ```
 
-To disable default precompilation and always output `{}` calls, pass a
+To disable default precompilation and always output `m()` calls, pass a
 `precompile` option:
 
 ```javascript
