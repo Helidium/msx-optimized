@@ -318,7 +318,7 @@ function runScripts() {
   console.warn(
     'You are using the in-browser JSX transformer. Be sure to precompile ' +
     'your JSX for production - ' +
-    'https://github.com/insin/msx/'
+    'https://github.com/helidium/msx-optimized/'
   );
 
   loadScripts(jsxScripts);
@@ -14536,10 +14536,10 @@ function isTagName(name) {
 
 var mParts = {
   // We assume that the Mithril runtime is already in scope
-  startTag: 'm(',
-  endTag: ')',
-  startAttrs: ', ',
-  startChildren: ', ['
+  startTag: '{tag:',
+  endTag: '}',
+  startAttrs: ', attrs: ',
+  startChildren: ', children: ['
 };
 
 function visitReactTag(traverse, object, path, state) {
